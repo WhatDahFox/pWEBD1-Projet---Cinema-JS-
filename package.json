@@ -1,13 +1,15 @@
 {
-  "name": "projet",
+  "name": "pwebd1_projet.js_cinema",
   "version": "1.0.0",
-  "description": "",
-  "main": "vite.config.js",
+  "description": "Projet de développement web réalisé en binôme dans le cadre du module pWEBD1 de SUPINFO. Création d'un site de cinéma interactif en HTML, CSS et JavaScript, utilisant l'API OMDb pour rechercher et consulter des films.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "private": true,
   "devDependencies": {
     "vite": "^8.3.4"
-  }
+  },
+  "type": "module"
 }
