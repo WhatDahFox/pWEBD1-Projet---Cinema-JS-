@@ -86,7 +86,16 @@ h1 {
     border-radius: 5px;
     padding: 0;
 }
-
+.section {
+    margin-bottom: 3rem;
+}
+main {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem 3vw 4rem;
+    box-sizing: border-box;
+}
 /* ==============================================
 1. Header
 =============================================== */
@@ -197,7 +206,35 @@ h1 {
 }
 
 /* ============================================
-2. Footer
+3. Bouton charger plus
+ ============================================ */
+.button_load_more{
+    display: block;
+    justify-self: center;
+    align-self: center;
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 2rem;
+    background-color: var(--accent-color);
+    color: var(--main-background);
+    font-size: var(--button-size);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button_load_more:hover{
+    background-color: var(--main-background);
+    color: var(--accent-color);
+}
+.button_load_more:focus-visible{
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+/* ============================================
+4. Footer
  ============================================ */
 .footer {
     grid-row: 3;

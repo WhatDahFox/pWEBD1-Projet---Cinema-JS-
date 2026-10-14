@@ -2,21 +2,57 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <title> Rechercher un film </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recherche | Cinéma Pathé en croûte </title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/search.css">
 </head>
-<body>
-    <header>
-        <h1> Rechercher un film </h1>
+<body class="wrapper">
+    <header class="block header">
+        <a id="logo" href="index.html">
+            <img src="images/logo.png" alt="Cinéma Pathé en croûte - Accueil">
+        </a>
+        <nav class="menu_header">
+            <a href="index.html"> Accueil </a>
+            <a href="search.html"> Recherche </a>
+        </nav>
     </header>
     <main>
-
+        <h1> Rechercher un film </h1>
+        <section class="section search_section">
+            <h2 class="title_section"> Recherche </h2>
+            <div class="search_bar">
+                <label for="search_input"> Titre du film </label>
+                <input
+                        id="search_input"
+                        type="search"
+                        name="search"
+                        placeholder="Recherche ..."
+                        autocomplete="off">
+            </div>
+        </section>
+        <section class="section results_section">
+            <h2 class="title_section"> Résultats de recherche </h2>
+            <p id="search_message" role="status" aria-live="polite">
+                Saisissez le titre d'un film pour commencer.
+            </p>
+            <div class="search_results">
+                <!-- Emplacement des cartes générées par JS -->
+            </div>
+            <button class="button_load_more" type="button" hidden> Charger plus de résultats </button>
+        </section>
     </main>
-    <footer>
-
+    <footer class="block footer">
+        <nav class="menu_footer">
+            <h2> Navigation </h2>
+            <a href="index.html"> Accueil </a>
+            <a href="search.html"> Recherche </a>
+        </nav>
+        <div class="informations">
+            <h2> Informations </h2>
+            <p> © Site réalisé par Nathan RENARD & Roland BOURDILLON.
+                <br> Tous droits réservés. </p>
+        </div>
     </footer>
     <script type="module" src="./js/search.js"></script>
 </body>

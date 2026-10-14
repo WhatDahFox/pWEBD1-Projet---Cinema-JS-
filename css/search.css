@@ -1,0 +1,55 @@
+/* ==============================================
+2. Barre de recherche
+=============================================== */
+.search_bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+.search_bar label {
+    font-size: var(--text-size);
+    font-weight: var(--weight-medium);
+}
+#search_input {
+    width: 100%;
+    padding: 1rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    background-color: var(--cards);
+    color: var(--main-text);
+    font-size: var(--text-size);
+    outline: none;
+}
+#search_input:focus {
+    border-color: var(--accent-color);
+}
+#search_input::placeholder {
+    color: var(--secondary-text);
+}
+
+/* ==============================================
+3. Résultats de recherche
+=============================================== */
+.search_results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+#search_message {
+    margin: 2rem 0;
+    color: var(--secondary-text);
+    text-align: center;
+}
+
+/* ==============================================
+4. Bouton charger plus
+=============================================== */
+.button_load_more[hidden] {
+    display: none;
+}
