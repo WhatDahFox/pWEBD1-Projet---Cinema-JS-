@@ -1,7 +1,7 @@
 const API_KEY = "c0dacd33";
 
 /*Les 2 Fonctions de requête pour les cards*/
-function byDefault(value){
+export function byDefault(value){
     return value !=="N/A" ? value : "Non Renseigné";
 }
 
