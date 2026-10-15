@@ -1,0 +1,51 @@
+/* ==============================================
+0. Racine
+=============================================== */
+/* Import de la typographie "Inter" */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Typographie */
+    --main-font: "Inter", Arial, sans-serif;
+
+    /* Tailles de texte */
+    --size-h1: clamp(1.75rem, 1rem + 2vw, 2.25rem);
+    --size-h2: clamp(1.5rem, 1rem + 1vw, 1.75rem);
+    --size-h3: clamp(1.25rem, 1rem + 0.5vw, 1.375rem);
+    --card-size: 1.125rem;
+    --text-size: 1rem;
+    --button-size: 0.9375rem;
+    --secondary-size: 0.875rem;
+
+    /* Tailles de graisses */
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Interlignes */
+    --title-interligne: 1.2;
+    --text-interligne: 1.6;
+
+    /* Couleur du site (mode_sombre) */
+    --main-background: #1E1E1E;
+    --cards: #2D2D2D;
+    --accent-color: #FF8C00;
+    --main-text: #F5F5F5;
+    --secondary-text: #A3A3A3;
+    --border: #454545;
+}
+
+/* Couleur du site (mode_clair) */
+.theme_light {
+    --main-background: #F5F5F5;
+    --cards: #FFFFFF;
+    --accent-color: #B85C00;
+    --main-text: #202020;
+    --secondary-text: #626262;
+    --border: #DADADA;
+}
+
+/* ==============================================
+1.
+=============================================== */
