@@ -2,21 +2,65 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <title> Fiche du film </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Détails du film | Cinéma Pathé en croûte </title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/movie.css">
 </head>
-<body>
-    <header>
-        <h1> Titre du film </h1>
+<body class="wrapper">
+    <header class="block header">
+        <a id="logo" href="index.html">
+            <img src="images/logo.png" alt="Cinéma Pathé en croûte - Accueil">
+        </a>
+        <nav class="menu_header">
+            <a href="index.html"> Accueil </a>
+            <a href="search.html"> Recherche </a>
+        </nav>
     </header>
     <main>
-
+        <h1> Fiche du film </h1>
+        <section class="section movie_section">
+            <h2 class="title_section"> Détails du film </h2>
+            <!-- 🠗 Fiche du film alimentée par l'API 🠗 -->
+            <article class="movie_details" hidden>
+                <div class="movie_poster">
+                    <img
+                        id="movie_poster"
+                        src=""
+                        alt="Affiche du film">
+                </div>
+                <div class="movie_information">
+                    <h3 id="movie_title"> </h3>
+                    <div class="movie_data">
+                        <p>
+                            <strong> Genre : </strong>
+                            <span id="movie_genre"> </span>
+                        </p>
+                        <p>
+                            <strong> Les acteurs : </strong>
+                            <span id="movie_actors"> </span>
+                        </p>
+                    </div>
+                    <div class="movie_summary">
+                        <h4> Synopsis </h4>
+                        <p id="movie_summary"> </p>
+                    </div>
+                </div>
+            </article>
+            <!-- 🠕 Fiche du film alimentée par l'API 🠕 -->
+        </section>
     </main>
-    <footer>
-
+    <footer class="block footer">
+        <nav class="menu_footer">
+            <h2> Navigation </h2>
+            <a href="index.html"> Accueil </a>
+            <a href="search.html"> Recherche </a>
+        </nav>
+        <div class="informations">
+            <h2> Informations </h2>
+            <p> © Site réalisé par Nathan RENARD & Roland BOURDILLON.
+                <br> Tous droits réservés. </p>
+        </div>
     </footer>
     <script type="module" src="./js/movie.js"></script>
 </body>

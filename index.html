@@ -2,21 +2,64 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <title> Page d'accueil </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Accueil | Cinéma Pathé en croûte </title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
-    <header>
-        <h1> Cinema Pathé en croûte </h1>
+<body class="wrapper">
+    <header class="block header">
+        <a id="logo" href="index.html">
+            <img src="images/logo.png" alt="Cinéma Pathé en croûte - Accueil">
+        </a>
+        <nav class="menu_header">
+            <a href="index.html"> Accueil </a>
+            <a href="search.html"> Recherche </a>
+        </nav>
     </header>
     <main>
-
+        <h1> Films à l'affiche </h1>
+        <section class="section trends_section">
+            <h2 class="title_section"> Films tendances </h2>
+            <div class="trending_movies">
+                <!-- Carte temporaire pour tester l'affichage -->
+                <article class="movie_card">
+                    <img src="./images/affiche_test.jpg" alt="Affiche du film Interstellar">
+                    <div class="movie_card_content">
+                        <h3 class="movie_card_title">Interstellar</h3>
+                        <p class="movie_card_description">
+                            Dans un futur proche, la Terre devient inhabitable.
+                            Un groupe d'explorateurs traverse un trou de ver
+                            afin de rechercher une nouvelle planète capable
+                            d'accueillir l'humanité.
+                        </p>
+                        <a class="movie_card_link" href="movie.html?id=tt0816692">
+                            Voir les détails
+                        </a>
+                    </div>
+                </article>
+                <!-- Carte temporaire pour tester l'affichage -->
+            </div>
+        </section>
+        <section class="section recent_section">
+            <h2 class="title_section"> Films récents </h2>
+            <div class="recent_movies">
+                <!-- Emplacement des films récents générées par JS -->
+            </div>
+            <button type="button" class="button_load_more"> ⟶ Charger plus de films récents ⟵ </button>
+        </section>
     </main>
-    <footer>
-
+    <footer class="block footer">
+        <nav class="menu_footer">
+            <h2> Navigation </h2>
+            <a href="index.html"> Accueil </a>
+            <a href="search.html"> Recherche </a>
+        </nav>
+        <div class="informations">
+            <h2> Informations </h2>
+            <p> © Site réalisé par Nathan RENARD & Roland BOURDILLON.
+                <br> Tous droits réservés. </p>
+        </div>
     </footer>
     <script type="module" src="./js/index.js"></script>
 </body>
