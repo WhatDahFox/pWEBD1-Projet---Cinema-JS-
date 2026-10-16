@@ -10,7 +10,7 @@ const trendingMovies = [
 ]
 for (const id of trendingMovies) {
     try{
-        const movie = await requestById(id);
+        const movie = await requestById(id, "short");
         document.querySelector(".trending_movies").append(createCard(movie));
     } catch(err){
         console.error(`Film ${id} ; ${err.message}`);
