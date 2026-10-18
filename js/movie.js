@@ -27,6 +27,7 @@ try {
     =============================================== */
 
     const movieTitle = document.querySelector("#movie_title");
+    const movieYear = document.querySelector("#movie_year");
     const moviePoster = document.querySelector("#movie_poster");
     const movieGenre = document.querySelector("#movie_genre");
     const movieActors = document.querySelector("#movie_actors");
@@ -36,6 +37,7 @@ try {
     const movieStatus = document.querySelector("#movie_status");
 
     movieTitle.textContent = movie.title;
+    movieYear.textContent = movie.year;
 
     // Affiche de remplacement
     moviePoster.onerror = () => {
