@@ -1,0 +1,53 @@
+/* ============================================
+1. Page 404
+ ============================================ */
+.page404{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page404 img{
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    margin: 2vw 0;
+}
+.page404 h1{
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+.page404 p{
+    margin: 0 2vw;
+    text-align: center;
+}
+.page404 h1, .page404 p{
+    text-wrap: balance;
+}
+/* ============================================
+2. Bouton retour à l'accueil
+ ============================================ */
+
+.page404 a{
+    display: block;
+    align-self: center;
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 2rem;
+    background-color: var(--accent-color);
+    color: var(--main-background);
+    font-size: var(--button-size);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.page404 a:hover{
+    background-color: var(--main-background);
+    color: var(--accent-color);
+}
+.page404 a:focus-visible{
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
