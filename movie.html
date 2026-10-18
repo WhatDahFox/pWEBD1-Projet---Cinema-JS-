@@ -21,6 +21,9 @@
         <h1> Fiche du film </h1>
         <section class="section movie_section">
             <h2 class="title_section"> Détails du film </h2>
+            <p id="movie_status" role="status" aria-live="polite">
+                Chargement du film...
+            </p>
             <!-- 🠗 Fiche du film alimentée par l'API 🠗 -->
             <article class="movie_details" hidden>
                 <div class="movie_poster">
@@ -40,6 +43,14 @@
                             <strong> Les acteurs : </strong>
                             <span id="movie_actors"> </span>
                         </p>
+                        <p>
+                            <strong> Sortie DVD : </strong>
+                            <span id="movie_dvd"> </span>
+                        </p>
+                        <div class="movie_ratings_block">
+                            <strong> Notes : </strong>
+                            <div id="movie_ratings"> </div>
+                        </div>
                     </div>
                     <div class="movie_summary">
                         <h4> Synopsis </h4>
