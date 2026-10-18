@@ -9,6 +9,9 @@ export async function requestById(imdbID, plot)/*plot=short or full*/ {
     const data = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}&plot=${plot}`).then(r=>r.json());
 
     if (data.Response === "False"){
+        if (data.Error === "Incorrect IMDb ID.") {
+            throw new Error("Film introuvable");
+        }
         throw new Error(data.Error);
     }
 
@@ -16,7 +19,7 @@ export async function requestById(imdbID, plot)/*plot=short or full*/ {
         id: data.imdbID,
         title: byDefault(data.Title),
         poster: data.Poster, /*Il faudrait prévoir une image de base*/
-        shortPlot: byDefault(data.Plot),
+        plot: byDefault(data.Plot),
         genre: byDefault(data.Genre),
         actors: byDefault(data.Actors),
         ratings: data.Ratings, /*Il s'agit d'un tableau qui sera vide s'il n'y a pas les notes*/

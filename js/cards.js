@@ -4,7 +4,15 @@ export function createCard(movie) {
     card.classList.add("movie_card");
 
     const poster = document.createElement("img");
-    poster.src = movie.poster;
+
+    poster.onerror = () => {
+        poster.onerror = null;
+        poster.src = "./images/affiche_indisponible.png";
+    };
+
+    poster.src = movie.poster !== "N/A"
+        ? movie.poster
+        : "./images/affiche_indisponible.png";
     poster.alt =`Affiche du film ${movie.title}`;
 
     const content = document.createElement("div");
@@ -16,7 +24,7 @@ export function createCard(movie) {
 
     const description = document.createElement("p");
     description.classList.add("movie_card_description");
-    description.innerText = movie.shortPlot;
+    description.innerText = movie.plot;
 
     const link = document.createElement("a");
     link.href = `movie.html?id=${movie.id}`;

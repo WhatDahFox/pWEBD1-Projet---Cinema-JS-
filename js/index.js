@@ -1,3 +1,7 @@
+/* ==============================================
+0. Importation des fonctions
+=============================================== */
+
 import { requestById } from "./api.js";
 import { createCard } from "./cards.js";
 
