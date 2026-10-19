@@ -39,7 +39,7 @@ export async function requestById(imdbID, plot)     /*plot=short or full*/ {
 =============================================== */
 
 export async function requestByTitle(searchTerm, page, year = ""){
-    const data = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(searchTerm)}&page=${page}&y=${year}`).then(r=>r.json());
+    const data = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(searchTerm)}&page=${page}&y=${year}&type=movie`).then(r=>r.json());
 
     if (data.Response === "False"){
         return [];
