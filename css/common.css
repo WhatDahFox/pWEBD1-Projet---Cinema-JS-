@@ -129,6 +129,51 @@ main {
     object-fit: contain;
 }
 
+    /* ==============================================
+    1.1 Mode Sombre / Clair
+    =============================================== */
+    #theme_button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+        height: 3rem;
+        padding: 0.5rem;
+        border: 1px solid var(--accent-color);
+        border-radius: 50px;
+        background-color: var(--cards);
+        color: var(--main-text);
+        font-size: var(--size-h3);
+        font-weight: var(--weight-bold);
+        cursor: pointer;
+    }
+
+    .theme_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+        border: 1px solid var(--accent-color);
+        border-radius: 50%;
+        background-color: var(--main-background);
+        color: var(--accent-color);
+        font-size: 1.3rem;
+        order: 2;
+        transition: transform 0.3s ease;
+    }
+
+    .theme_text {
+        flex: 1;
+        text-align: center;
+    }
+
+    /* Activation du mode clair */
+    .theme_light #theme_button .theme_icon {
+        order: 0;
+    }
+
 /* ==============================================
 1. Titres des sections
 =============================================== */
