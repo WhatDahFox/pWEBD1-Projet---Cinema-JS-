@@ -198,8 +198,19 @@ main {
 /* ==============================================
 2. Cartes des films
 =============================================== */
-.movie_card {
+.movie_card_anchor {
     flex: 0 1 220px;
+    display: flex;
+    color : inherit;
+    text-decoration: none;
+}
+
+.movie_card_anchor:hover {
+    text-decoration: none;
+}
+
+.movie_card {
+    flex: 1;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -208,7 +219,6 @@ main {
     border-radius: 1rem;
 }
 .movie_card:hover {
-    transform: scale(1.05);
     border: 1px solid var(--accent-color);
     transition: transform 0.3s ease, text-decoration-color 0.3s ease;
 }
@@ -225,6 +235,11 @@ main {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+}
+.movie_card_content span:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 5px;
 }
 .movie_card_title {
     margin: 0;
@@ -243,7 +258,7 @@ main {
     -webkit-line-clamp: 5;
     line-clamp: 5;
 }
-.movie_card_link {
+.movie_card_detailsLabel {
     align-self: flex-start;
     margin-top: auto;
     color: var(--accent-color);
@@ -255,9 +270,7 @@ main {
  ============================================ */
 .button_load_more{
     display: block;
-    justify-self: center;
-    align-self: center;
-    margin: 2rem;
+    margin: 2rem auto;
     padding: 0.5rem 1rem;
     border: 1px solid var(--accent-color);
     border-radius: 2rem;
