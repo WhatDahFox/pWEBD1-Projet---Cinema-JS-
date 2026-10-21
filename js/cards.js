@@ -27,12 +27,16 @@ export function createCard(movie) {
     description.innerText = movie.plot;
 
     const link = document.createElement("a");
+    link.classList.add("movie_card_anchor")
     link.href = `movie.html?id=${movie.id}`;
-    link.classList.add("movie_card_link");
-    link.innerText = "Voir les détails";
 
-    content.append(title, description, link);
+    const detailsLabel = document.createElement("span");
+    detailsLabel.classList.add("movie_card_detailsLabel");
+    detailsLabel.innerText = "Voir les détails";
+
+    content.append(title, description, detailsLabel);
     card.append(poster, content);
+    link.append(card);
 
-    return card;
+    return link;
 }

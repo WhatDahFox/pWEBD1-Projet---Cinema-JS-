@@ -3,6 +3,7 @@
 ============================================ */
 .movie_details {
     display: flex;
+    flex-flow: row wrap;
     align-items: flex-start;
     gap: 3rem;
     margin: 2rem auto;
@@ -19,7 +20,7 @@
 2. Affiche du film
 ============================================ */
 .movie_poster {
-    flex: 0 0 300px;
+    flex: 0 1 300px;
 }
 .movie_poster img {
     display: block;
@@ -36,7 +37,7 @@
     flex-direction: column;
     flex: 1;
     gap: 2rem;
-    min-width: 0;
+    min-width: 45vw;
 }
 #movie_title {
     margin: 0;

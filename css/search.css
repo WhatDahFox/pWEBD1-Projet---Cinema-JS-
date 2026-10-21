@@ -38,7 +38,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 #search_message {
