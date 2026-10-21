@@ -1,10 +1,14 @@
-/*Fonction pour créer une card*/
+/* ==============================================
+1. Fonction pour créer une card
+=============================================== */
+
 export function createCard(movie) {
     const card = document.createElement("article");
     card.classList.add("movie_card");
 
     const poster = document.createElement("img");
 
+    // Gestion d'absence de poster de film
     poster.onerror = () => {
         poster.onerror = null;
         poster.src = "./images/affiche_indisponible.png";
@@ -15,6 +19,7 @@ export function createCard(movie) {
         : "./images/affiche_indisponible.png";
     poster.alt =`Affiche du film ${movie.title}`;
 
+    // Contenu des cards
     const content = document.createElement("div");
     content.classList.add("movie_card_content");
 

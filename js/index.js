@@ -2,7 +2,7 @@
 0. Importation des fonctions
 =============================================== */
 
-import { requestById, requestByTitle } from "./api.js";
+import { requestById } from "./api.js";
 import { createCard } from "./cards.js";
 
 /* ==============================================
@@ -164,10 +164,3 @@ async function loadRecentMovies() {
 await loadRecentMovies();           // Appel de la fonction
 
 buttonLoadMore.addEventListener("click", loadRecentMovies);         // Chargement au clic
-
-/* ==============================================
-3. Bouton charger plus - 10 par 10
-=============================================== */
-
-
-
