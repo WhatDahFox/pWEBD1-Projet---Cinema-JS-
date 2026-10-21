@@ -11,11 +11,11 @@ header.innerHTML = `
         <nav class="menu_header">
             <a href="index.html"> Accueil </a>
             <a href="search.html"> Recherche </a>
-            <button type="button" id="theme_button">
+        </nav>
+        <button type="button" id="theme_button">
                 <span class="theme_icon"> 🔆 </span>
                 <span class="theme_text"> Jour </span>
-            </button>
-        </nav>
+        </button>
 `;
 
 /* ==============================================
